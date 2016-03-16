@@ -11,7 +11,7 @@ require("./tabs/tabs.module");
 require("./login/login.module");
 require("./home-page/home-page.module");
 
-var app: any = angular.module("future", [
+var app: any = angular.module("app", [
     "app.core",
     "app.routerOutlet",
 

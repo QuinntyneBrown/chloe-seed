@@ -22,15 +22,15 @@ gulp.task('template-cache', function () {
     return gulp.src('wwwroot/**/*.html')
         .pipe(templateCache({
             root: 'wwwroot/',
-            module: "future"
+            module: "app"
         }))
-        .pipe(concat('future.templates.js'))
+        .pipe(concat('app.templates.js'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('concat-css', function () {
     return gulp.src(["wwwroot/**/*.css"])
-      .pipe(concat('future.css'))
+      .pipe(concat('app.css'))
       .pipe(gulp.dest('./dist/'));
 });
 
@@ -54,7 +54,7 @@ gulp.task("webpack", function () {
             ]
         }
     }))
-    .pipe(rename("future.js"))
+    .pipe(rename("app.js"))
     .pipe(gulp.dest('dist/'));
 });
 
