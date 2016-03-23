@@ -1,10 +1,11 @@
-﻿import { CanActivate, Component } from "../core/component-decorators";
+﻿import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import * as actions from "./login.actions";
 
 @Component({
     templateUrl: "wwwroot/login/login-page.component.html",
     selector: "login-page",
-    providers: ["loginRedirect"]
+    providers: ["loginRedirect"],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginPageComponent {
     constructor(private loginRedirect) { }

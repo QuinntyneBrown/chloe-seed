@@ -270,7 +270,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiUnityActionFilterProvider.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\UserConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +296,7 @@
     <Compile Include="Server\Dtos\RegistrationRequestDto.cs" />
     <Compile Include="Server\Dtos\RegistrationResponseDto.cs" />
     <Compile Include="Server\Dtos\TokenDto.cs" />
+    <Compile Include="Server\Filters\ChloeHandleErrorAttribute.cs" />
     <Compile Include="Server\Models\BaseEntity.cs" />
     <Compile Include="Server\Models\Role.cs" />
     <Compile Include="Server\Models\User.cs" />
@@ -314,6 +315,8 @@
     <Compile Include="Server\Services\StreamHelper.cs" />
     <Compile Include="Server\Services\UserService.cs" />
     <Compile Include="Server\UnityConfiguration.cs" />
+    <Compile Include="Server\Utils\Contracts\ILogger.cs" />
+    <Compile Include="Server\Utils\Logger.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -346,6 +349,7 @@
     <TypeScriptCompile Include="wwwroot\core\api-endpoint-provider.ts" />
     <TypeScriptCompile Include="wwwroot\core\append-to-body-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\auth-interceptor.ts" />
+    <TypeScriptCompile Include="wwwroot\core\change-detection-strategy.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-decorators.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-extension.ts" />
     <TypeScriptCompile Include="wwwroot\core\core.module.ts" />
