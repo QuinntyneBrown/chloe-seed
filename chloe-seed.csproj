@@ -185,16 +185,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="bower_components\angular-ui-tinymce\src\tinymce.js" />
+    <Content Include="bower_components\tinymce-dist\tinymce.js" />
     <Content Include="dist\app.css" />
     <Content Include="dist\app.js" />
     <Content Include="dist\app.templates.js" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="lib\angular-route.js" />
+    <Content Include="lib\angular-sanitize.js" />
     <Content Include="lib\angular.js" />
     <Content Include="lib\jquery.js" />
     <Content Include="lib\pnp-ww.js" />
     <Content Include="lib\rx.all.compat.min.js" />
+    <Content Include="node_modules\angular-sanitize\angular-sanitize.js" />
     <Content Include="packages.config" />
     <Content Include="tsconfig.json" />
     <Content Include="wwwroot\app\app.component.css" />
