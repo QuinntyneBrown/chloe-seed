@@ -9,5 +9,10 @@ namespace Chloe.Server.Utils
         {
 
         }
+
+        public void Log(string message)
+        {
+
+        }
     }
 }
