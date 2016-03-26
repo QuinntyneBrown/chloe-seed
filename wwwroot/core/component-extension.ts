@@ -37,15 +37,17 @@ angular.module = function () {
             ]);
         }
 
+        
         var directiveDefinitionObject: any = {
             restrict: options.restrict || "E",
             template: angular.isArray(options.template) ? options.template.join(" \n ") : options.template,
             templateUrl: options.templateUrl,
             replace: options.replace || true,
-            scope: options.scope || {},
+            scope: angular.isUndefined(options.scope) ? {} : options.scope,
             bindToController: options.bindToController || {},
             transclude: options.transclude,
             controllerAs: "vm",
+            require: options.require,
             controller: componentNameCamelCase + "Component"
         }
 
@@ -109,8 +111,25 @@ angular.module = function () {
 
                         scope.$on("$destroy", () => subscription.dispose());
                     }
+
+                    //https://developer.mozilla.org/en-US/docs/Web/Events/resize
+
+                    if (scope.vm && scope.vm.onResize) {
+                        window.addEventListener("resize", scope.vm.onResize, false);
+                        window.addEventListener("orientationchange", scope.vm.onResize, false);
+
+                        scope.$on("$destroy", () => {
+                            window.removeEventListener("resize", scope.vm.onResize, false);
+                            window.removeEventListener("orientationchange", scope.vm.onResize, false)
+                        });
+                    }
                 },
-                post: function (scope: any) {
+                post: function (scope: any, element, attributes, controller) {
+
+                    if (options.require) {
+                        var componentName = options.require.replace("^", "");
+                        scope.vm[componentName] = controller;
+                    }
 
                     if (options.transclude && scope.vm.$transclude)
                         scope.vm.$transclude(scope, (clone: ng.IAugmentedJQuery) => {

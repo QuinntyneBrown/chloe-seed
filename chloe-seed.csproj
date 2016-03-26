@@ -222,6 +222,7 @@
     <Content Include="wwwroot\button\button.module.js" />
     <Content Include="wwwroot\button\button.reducers.js" />
     <Content Include="wwwroot\button\button.service.js" />
+    <Content Include="wwwroot\core\core.css" />
     <Content Include="wwwroot\footer\footer.component.css" />
     <Content Include="wwwroot\footer\footer.component.html" />
     <Content Include="wwwroot\header\header.component.css" />
@@ -366,6 +367,7 @@
     <TypeScriptCompile Include="wwwroot\core\change-detection-strategy.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-decorators.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-extension.ts" />
+    <TypeScriptCompile Include="wwwroot\core\context-document.ts" />
     <TypeScriptCompile Include="wwwroot\core\core.module.ts" />
     <TypeScriptCompile Include="wwwroot\core\extend-css-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\fetch.ts" />
@@ -377,12 +379,14 @@
     <TypeScriptCompile Include="wwwroot\core\pluck-out.ts" />
     <TypeScriptCompile Include="wwwroot\core\pluck.ts" />
     <TypeScriptCompile Include="wwwroot\core\remove-element.ts" />
+    <TypeScriptCompile Include="wwwroot\core\renderer.ts" />
     <TypeScriptCompile Include="wwwroot\core\route-resolver.ts" />
     <TypeScriptCompile Include="wwwroot\core\route-when-extension.ts" />
     <TypeScriptCompile Include="wwwroot\core\safe-digest.ts" />
     <TypeScriptCompile Include="wwwroot\core\service.ts" />
     <TypeScriptCompile Include="wwwroot\core\set-opacity-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\store.ts" />
+    <TypeScriptCompile Include="wwwroot\core\title.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.actions.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.component.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.module.ts" />

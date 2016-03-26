@@ -1,6 +1,6 @@
 ﻿/// <reference path="../../typings/tsd.d.ts" />
 
-require("../../lib/jquery");
+require("./core.css");
 require("../../lib/rx.all.compat.min")
 
 require("./local-storage-manager-provider");
@@ -21,8 +21,9 @@ require("./route-resolver");
 require("./route-when-extension");
 require("./set-opacity-async");
 require("./auth-interceptor");
-
-
+require("./context-document");
+require("./renderer");
+require("./title");
 
 var app = (<any>angular.module("app.core", [
     "ngSanitize",
@@ -31,6 +32,7 @@ var app = (<any>angular.module("app.core", [
     "appendToBodyAsync",
     "apiEndpoint",
     "authInterceptor",
+    "contextDocument",
     "extendCssAsync",
     "fetch",
     "formEncode",
@@ -38,9 +40,11 @@ var app = (<any>angular.module("app.core", [
     "localStorageManager",
     "loginRedirect",
     "removeElement",
+    "renderer",
     "routeResolver",
     "routeWhenExtension",
     "safeDigest",
     "setOpacityAsync",
-    "store",   
+    "store",
+    "title"
 ]));
