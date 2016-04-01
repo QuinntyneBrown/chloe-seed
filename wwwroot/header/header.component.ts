@@ -4,7 +4,7 @@ import { HeaderActionCreator } from "./header.actions";
 @Component({
     templateUrl: "wwwroot/header/header.component.html",
     selector: "header",
-    providers: ["headerActionCreator"],
+    viewProviders: ["headerActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {

@@ -4,7 +4,7 @@ import * as actions from "./login.actions";
 @Component({
     templateUrl: "wwwroot/login/login-page.component.html",
     selector: "login-page",
-    providers: ["loginRedirect"],
+    viewProviders: ["loginRedirect"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginPageComponent {

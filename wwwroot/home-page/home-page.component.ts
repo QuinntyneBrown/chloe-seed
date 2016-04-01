@@ -5,7 +5,7 @@ import { HomePageActionCreator } from "./home-page.actions";
 @Component({
     templateUrl: "wwwroot/home-page/home-page.component.html",
     selector: "home-page",
-    providers: ["homePageActionCreator"],
+    viewProviders: ["homePageActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent {

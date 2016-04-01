@@ -4,7 +4,7 @@ import { FooterActionCreator } from "./footer.actions";
 @Component({
     templateUrl: "wwwroot/footer/footer.component.html",
     selector: "footer",
-    providers: ["footerActionCreator"],
+    viewProviders: ["footerActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {

@@ -310,6 +310,7 @@
     <Compile Include="Server\Dtos\RegistrationRequestDto.cs" />
     <Compile Include="Server\Dtos\RegistrationResponseDto.cs" />
     <Compile Include="Server\Dtos\TokenDto.cs" />
+    <Compile Include="Server\Exceptions\NotFoundException.cs" />
     <Compile Include="Server\Filters\ChloeHandleErrorAttribute.cs" />
     <Compile Include="Server\Models\BaseEntity.cs" />
     <Compile Include="Server\Models\Role.cs" />
@@ -335,7 +336,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Server\Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="node_modules\rx\ts\rx.all.d.ts" />

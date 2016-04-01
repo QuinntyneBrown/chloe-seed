@@ -4,7 +4,7 @@ import { AppActionCreator } from "./app.actions";
 @Component({
     templateUrl: "wwwroot/app/app.component.html",
     selector: "app",
-    providers: ["appActionCreator"],
+    viewProviders: ["appActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {

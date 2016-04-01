@@ -7,7 +7,7 @@ import * as actions from "./registration.actions";
     templateUrl: "wwwroot/registration/registration-page.component.html",
     styleUrls: ["wwwroot/registration/registration-page.component.css"],
     selector: "registration-page",
-    providers: [ "$location", "invokeAsync", "loginActionCreator", "registrationActionCreator" ]
+    viewProviders: [ "$location", "invokeAsync", "loginActionCreator", "registrationActionCreator" ]
 })
 export class RegistrationPageComponent {
     constructor(private $location: angular.ILocationService,

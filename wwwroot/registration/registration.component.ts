@@ -5,7 +5,7 @@ import { RegistrationActionCreator } from "./registration.actions";
     templateUrl: "wwwroot/registration/registration.component.html",
     styleUrls: ["wwwroot/registration/registration.component.css"],
     selector: "registration",
-    providers: ["invokeAsync", "registrationActionCreator"],
+    viewProviders: ["invokeAsync", "registrationActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush  
 })
 export class RegistrationComponent {
