@@ -8,6 +8,7 @@ require("./button/button.module");
 require("./header/header.module");
 require("./modal/modal.module");
 require("./tabs/tabs.module");
+require("./registration/registration.module");
 require("./login/login.module");
 require("./layout/layout.module");
 
@@ -22,6 +23,7 @@ var app: any = angular.module("app", [
     "app.tabs",
     "app.login",
     "app.modal",
+    "app.registration",
     "app.layout"
 ]);
 
@@ -41,6 +43,9 @@ app.config(["$routeProvider", ($routeProvider: angular.route.IRouteProvider) => 
         .when("/", { template: "<home-container></home-container>" })
         .when("/register", { template: "<registration-container></registration-container>" })
         .when("/login", { template: "<login-container></login-container>" });
+
+    $routeProvider
+        .when("/admin", { template: "<admin-container></admin-container>" });
 }]);
 
 app.config(["apiEndpointProvider", (apiEndpointProvider) => {

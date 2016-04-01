@@ -4,12 +4,12 @@ import { LoginActionCreator } from "../login/login.actions";
 import * as actions from "./registration.actions";
 
 @Component({
-    templateUrl: "wwwroot/registration/registration-page.component.html",
-    styleUrls: ["wwwroot/registration/registration-page.component.css"],
-    selector: "registration-page",
+    templateUrl: "wwwroot/registration/registration-container.component.html",
+    styleUrls: ["wwwroot/registration/registration-container.component.css"],
+    selector: "registration-container",
     viewProviders: [ "$location", "invokeAsync", "loginActionCreator", "registrationActionCreator" ]
 })
-export class RegistrationPageComponent {
+export class RegistrationContainerComponent {
     constructor(private $location: angular.ILocationService,
         private invokeAsync,
         private loginActionCreator: LoginActionCreator,
