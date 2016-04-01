@@ -2,12 +2,13 @@
 import * as actions from "./login.actions";
 
 @Component({
-    templateUrl: "wwwroot/login/login-page.component.html",
-    selector: "login-page",
+    template: require("./login-container.component.html"),
+    styles: [require("./login-container.component.css")],
+    selector: "login-container",
     viewProviders: ["loginRedirect"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoginPageComponent {
+export class LoginContainerComponent {
     constructor(private loginRedirect) { }
 
     storeOnChange = state => {

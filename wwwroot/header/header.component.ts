@@ -2,7 +2,8 @@ import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import { HeaderActionCreator } from "./header.actions";
 
 @Component({
-    templateUrl: "wwwroot/header/header.component.html",
+    template: require("./header.component.html"),
+    styles: [require("./header.component.css")],
     selector: "header",
     viewProviders: ["headerActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush

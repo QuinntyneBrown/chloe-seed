@@ -1,13 +1,10 @@
 import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
-import { ButtonActionCreator } from "./button.actions";
 
 @Component({
-    templateUrl: "wwwroot/button/button.component.html",
+    template: require("./button.component.html"),
+    styles: [require("./button.component.css")],
     selector: "calypso-button",
     componentName: "calypsoButtonComponent",
     inputs: ['caption', 'onClick']
 })
-export class ButtonComponent {
-    constructor() { }
-  
-}
+export class ButtonComponent {}

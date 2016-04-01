@@ -29,5 +29,6 @@ export interface IComponentConfigurationOptions {
     scope?: any,
     require?:string|Array<string>,
     styleUrls?: Array<string>,
+    styles?: Array<string>,
     changeDetection?: ChangeDetectionStrategy
 }

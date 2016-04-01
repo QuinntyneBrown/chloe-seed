@@ -2,7 +2,8 @@ import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import { FooterActionCreator } from "./footer.actions";
 
 @Component({
-    templateUrl: "wwwroot/footer/footer.component.html",
+    template: require("./footer.component.html"),
+    styles: [require("./footer.component.css")],
     selector: "footer",
     viewProviders: ["footerActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush

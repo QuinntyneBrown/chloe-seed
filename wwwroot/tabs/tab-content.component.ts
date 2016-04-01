@@ -2,7 +2,8 @@
 import { TabsActionCreator } from "./tabs.actions";
 
 @Component({
-    templateUrl: "wwwroot/tabs/tab-content.component.html",
+    template: require("./tab-content.component.html"),
+    styles: [require("./tab-content.component.css")],
     selector: "tab-content",
     transclude: true,
     viewProviders: ["tabsActionCreator"]

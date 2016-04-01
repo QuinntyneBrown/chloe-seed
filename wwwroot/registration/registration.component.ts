@@ -2,8 +2,8 @@ import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import { RegistrationActionCreator } from "./registration.actions";
 
 @Component({
-    templateUrl: "wwwroot/registration/registration.component.html",
-    styleUrls: ["wwwroot/registration/registration.component.css"],
+    template: require("./registration.component.html"),
+    styles: [require("./registration.component.css")],
     selector: "registration",
     viewProviders: ["invokeAsync", "registrationActionCreator"],
     changeDetection: ChangeDetectionStrategy.OnPush  

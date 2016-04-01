@@ -4,8 +4,8 @@ import { LoginActionCreator } from "../login/login.actions";
 import * as actions from "./registration.actions";
 
 @Component({
-    templateUrl: "wwwroot/registration/registration-container.component.html",
-    styleUrls: ["wwwroot/registration/registration-container.component.css"],
+    template: require("./registration-container.component.html"),
+    styles: [require("./registration-container.component.css")],
     selector: "registration-container",
     viewProviders: [ "$location", "invokeAsync", "loginActionCreator", "registrationActionCreator" ]
 })

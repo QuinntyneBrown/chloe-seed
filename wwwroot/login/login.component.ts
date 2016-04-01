@@ -2,7 +2,8 @@ import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import { LoginActionCreator } from "./login.actions";
 
 @Component({
-    templateUrl: "wwwroot/login/login.component.html",
+    template: require("./login.component.html"),
+    styles: [require("./login.component.css")],
     selector: "login",
     viewProviders: ["invokeAsync", "loginActionCreator"]
 })
