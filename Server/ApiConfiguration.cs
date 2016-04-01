@@ -26,7 +26,7 @@ namespace Chloe.Server
 
             Chloe.Server.Config.Contracts.IConfigurationProvider configurationProvider = UnityConfiguration.GetContainer().Resolve<IConfigurationProvider>();
 
-            app.UseOAuthAuthorizationServer(new OAuthOptions(identityService));
+            app.UseOAuthAuthorizationServer(new OAuthOptions(configurationProvider, identityService));
 
             app.UseJwtBearerAuthentication(new Chloe.Server.Auth.JwtOptions(configurationProvider));
 

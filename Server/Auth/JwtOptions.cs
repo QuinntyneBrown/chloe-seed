@@ -8,7 +8,7 @@ namespace Chloe.Server.Auth
     {
         public JwtOptions(IConfigurationProvider configurationProvider)
         {
-            var config = AuthConfiguration.Config;
+            var config = configurationProvider.Get<IAuthConfiguration>();
 
             AllowedAudiences = new[] { config.JwtAudience };
             IssuerSecurityTokenProviders = new[] 
