@@ -9,7 +9,7 @@ require("./header/header.module");
 require("./modal/modal.module");
 require("./tabs/tabs.module");
 require("./login/login.module");
-require("./home-page/home-page.module");
+require("./layout/layout.module");
 
 var app: any = angular.module("app", [
     "app.core",
@@ -22,7 +22,7 @@ var app: any = angular.module("app", [
     "app.tabs",
     "app.login",
     "app.modal",
-    "app.homePage"
+    "app.layout"
 ]);
 
 app.config(["initialStateProvider", "localStorageManagerProvider", (initialStateProvider, localStorageManagerProvider) => {
@@ -38,9 +38,9 @@ app.config(["initialStateProvider", "localStorageManagerProvider", (initialState
 
 app.config(["$routeProvider", ($routeProvider: angular.route.IRouteProvider) => {
     $routeProvider
-        .when("/", { template: "<home-page></home-page>" })
-        .when("/register", { template: "<registration-page></registration>" })
-        .when("/login", { template: "<login-page></login-page>" });
+        .when("/", { template: "<home-container></home-container>" })
+        .when("/register", { template: "<registration-container></registration-container>" })
+        .when("/login", { template: "<login-container></login-container>" });
 }]);
 
 app.config(["apiEndpointProvider", (apiEndpointProvider) => {
