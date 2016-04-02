@@ -2,17 +2,20 @@
 using Microsoft.Owin.Security;
 using System;
 using Microsoft.Owin.Security.OAuth;
-using Chloe.Server.Config;
+using Chloe.Server.Config.Contracts;
 
 namespace Chloe.Server.Auth
 {
     public class JwtWriterFormat : ISecureDataFormat<AuthenticationTicket>
     {
         private readonly OAuthAuthorizationServerOptions _options;
+        private readonly IAuthConfiguration configuration;
 
-        public JwtWriterFormat(OAuthAuthorizationServerOptions options)
+        public JwtWriterFormat(IConfigurationProvider configurationProvider, OAuthAuthorizationServerOptions options)
         {
+
             _options = options;
+            this.configuration = configurationProvider.Get<IAuthConfiguration>(); 
         }
 
         public string SignatureAlgorithm
@@ -29,7 +32,7 @@ namespace Chloe.Server.Auth
         {
             if (data == null) throw new ArgumentNullException("data");
 
-            var config = AuthConfiguration.Config;
+            var config = this.configuration;
             var issuer = config.JwtIssuer;
             var audience = config.JwtAudience;
             var key = Convert.FromBase64String(config.JwtKey);

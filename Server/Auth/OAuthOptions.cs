@@ -17,7 +17,7 @@ namespace Chloe.Server.Auth
 
             TokenEndpointPath = new PathString(config.TokenPath);
             AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(config.ExpirationMinutes);
-            AccessTokenFormat = new JwtWriterFormat(this);
+            AccessTokenFormat = new JwtWriterFormat(configurationProvider, this);
             Provider = new OAuthProvider(identityService);
             AllowInsecureHttp = true;
         }

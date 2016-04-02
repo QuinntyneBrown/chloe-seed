@@ -1,5 +1,4 @@
 ﻿using Microsoft.Owin.Security.Jwt;
-using Chloe.Server.Config;
 using Chloe.Server.Config.Contracts;
 
 namespace Chloe.Server.Auth
