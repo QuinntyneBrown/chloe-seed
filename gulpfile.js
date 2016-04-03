@@ -5,6 +5,7 @@ var gulpUtil = require("gulp-util");
 var webpack = require("gulp-webpack");
 var rename = require("gulp-rename");
 var rimraf = require("rimraf");
+var clean = require('gulp-clean');
 
 var libs = [
 
@@ -19,11 +20,16 @@ gulp.task('libs', function () {
     return gulp.src(libs).pipe(gulp.dest(paths.lib));
 });
 
+gulp.task('remove-compiled-js', function () {
+    return gulp.src(["./wwwroot/**/*.js", "./wwwroot/**/*.js.map"], { read: false })
+    .pipe(clean());
+});
+
 gulp.task('clean', function (callback) {
     //rimraf(paths.lib, callback);
 });
 
-gulp.task("webpack", function () {
+gulp.task("webpack", ['remove-compiled-js'], function () {
     return gulp.src('wwwroot/main.ts')
     .pipe(webpack({
         resolve: {
@@ -50,7 +56,7 @@ gulp.task("webpack", function () {
 gulp.task('watch', function () {
     gulp.watch([
         './wwwroot/**/*.ts', './wwwroot/**/*.html', './wwwroot/**/*.css'
-    ], ['webpack']);
+    ], ['remove-compiled-js','webpack']);
 });
 
-gulp.task('default', ['webpack', 'watch']);
+gulp.task('default', ['remove-compiled-js', 'webpack', 'watch']);
