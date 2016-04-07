@@ -30,5 +30,6 @@ export interface IComponentConfigurationOptions {
     require?:string|Array<string>,
     styleUrls?: Array<string>,
     styles?: Array<string>,
-    changeDetection?: ChangeDetectionStrategy
+    changeDetection?: ChangeDetectionStrategy,
+    moduleId?: string
 }

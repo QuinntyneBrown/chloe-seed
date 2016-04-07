@@ -1,8 +1,9 @@
 ﻿export class Renderer {
-    setElementProperty = (element: HTMLElement, property: string, value: string) => {
-        element.attributes[property] = value;
+
+    setElementStyle = (element: HTMLElement, propertyName: string, propertyValue: string) => {
+        element.style[propertyName] = propertyValue;
     }
+
 }
 
-
-angular.module("renderer",[]).service("renderer", [Renderer]);
+angular.module("renderer", []).service("renderer", Renderer);

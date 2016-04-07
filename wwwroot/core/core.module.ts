@@ -9,9 +9,12 @@ require("./store");
 require("./add-or-update");
 require("./api-endpoint-provider");
 require("./append-to-body-async");
+require("./debounce");
 require("./extend-css-async");
 require("./fetch");
 require("./form-encode");
+require("./get-from-url-sync");
+require("./get-x");
 require("./invoke-async");
 require("./login-redirect-provider");
 require("./safe-digest");
@@ -21,21 +24,22 @@ require("./route-resolver");
 require("./route-when-extension");
 require("./set-opacity-async");
 require("./auth-interceptor");
-require("./context-document");
 require("./renderer");
-require("./title");
+require("./translate-x");
+require("./translate-x-async");
 
-var app = (<any>angular.module("app.core", [
-    "ngSanitize",
 
+let coreApp = (<any>angular.module("app.core", [
     "addOrUpdate",
     "appendToBodyAsync",
     "apiEndpoint",
     "authInterceptor",
-    "contextDocument",
+    "debounce",
     "extendCssAsync",
     "fetch",
     "formEncode",
+    "getFromUrlSync",
+    "getX",
     "invokeAsync",
     "localStorageManager",
     "loginRedirect",
@@ -45,6 +49,7 @@ var app = (<any>angular.module("app.core", [
     "routeWhenExtension",
     "safeDigest",
     "setOpacityAsync",
-    "store",
-    "title"
+    "store",   
+    "translateX",
+    "translateXAsync",
 ]));

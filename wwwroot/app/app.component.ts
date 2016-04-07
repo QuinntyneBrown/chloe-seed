@@ -1,4 +1,4 @@
-import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
+import { CanActivate, Component, ChangeDetectionStrategy, Pipe, PipeTransform } from "../core";
 import { AppActionCreator } from "./app.actions";
 
 @Component({
@@ -12,3 +12,5 @@ export class AppComponent {
     constructor(private appActionCreator: AppActionCreator) { }
   
 }
+
+
