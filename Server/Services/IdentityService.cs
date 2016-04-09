@@ -5,7 +5,6 @@ using System.Data.Entity;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Chloe.Server.Models;
 
 namespace Chloe.Server.Services
@@ -44,7 +43,7 @@ namespace Chloe.Server.Services
 
             var user = cache.FromCacheOrService<User>(() => uow.Users.GetAll()
                 .Include(x => x.Roles)
-                .Single(x => x.Username == username), string.Format("User: {0}", username));
+                .Single(x => x.Username == username), string.Format($"User: {username}"));
 
             claims.Add(new System.Security.Claims.Claim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name", username));
 
