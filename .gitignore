@@ -17,6 +17,7 @@ dist/**/*.js
 dist/**/*.js.map
 
 # Build results
+[Dd]ocs/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/

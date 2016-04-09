@@ -1,4 +1,8 @@
-﻿angular.module("apiEndpoint", []).provider("apiEndpoint", class ApiEndpointProvider {
+﻿export interface IApiEndpoint {
+    getBaseUrl(name?: string): string;
+}
+
+export class ApiEndpointProvider {
     config: any = {
         getBaseUrl: (name?: string) => {
             var baseUrl = "";
@@ -31,7 +35,9 @@
         this.config.baseUrls.push({ url: baseUrl, name: name });
     }
 
-    $get(): any {
+    $get(): IApiEndpoint {
         return this.config;
     }
-});
+}
+
+angular.module("apiEndpoint", []).provider("apiEndpoint", ApiEndpointProvider);

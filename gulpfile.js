@@ -6,6 +6,7 @@ var webpack = require("gulp-webpack");
 var rename = require("gulp-rename");
 var rimraf = require("rimraf");
 var clean = require('gulp-clean');
+var child_process = require("child_process");
 
 var libs = [
 
@@ -16,11 +17,15 @@ var paths = {
     lib: './lib/'
 };
 
+gulp.task("typedoc", function () {
+    child_process.exec("typedoc --out ./docs/ ./wwwroot/ --module commonjs --jsx react --experimentalDecorators --ignoreCompilerErrors --exclude node_module");
+});
+
 gulp.task('libs', function () {
     return gulp.src(libs).pipe(gulp.dest(paths.lib));
 });
 
-gulp.task('remove-compiled-js', function () {
+gulp.task('remove-compiled-js', ['typedoc'], function () {
     return gulp.src(["./wwwroot/**/*.js", "./wwwroot/**/*.js.map"], { read: false })
     .pipe(clean());
 });
@@ -56,7 +61,7 @@ gulp.task("webpack", ['remove-compiled-js'], function () {
 gulp.task('watch', function () {
     gulp.watch([
         './wwwroot/**/*.ts', './wwwroot/**/*.html', './wwwroot/**/*.css'
-    ], ['remove-compiled-js','webpack']);
+    ], ['typedoc','remove-compiled-js','webpack']);
 });
 
-gulp.task('default', ['remove-compiled-js', 'webpack', 'watch']);
+gulp.task('default', ['typedoc','remove-compiled-js', 'webpack', 'watch']);

@@ -1,5 +1,8 @@
+import { IApiEndpoint } from "../core/api-endpoint-provider";
+import { Fetch } from "../core/fetch";
+
 export class LoginService {
-    constructor(private $q: angular.IQService, private apiEndpoint, private fetch, private formEncode) { }
+    constructor(private $q: angular.IQService, public apiEndpoint: IApiEndpoint, private fetch: Fetch, private formEncode) { }
 
     tryToLogin = options => {
         var deferred = this.$q.defer();
