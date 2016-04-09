@@ -1,11 +1,7 @@
-﻿using Chloe.Server.Config;
-using Chloe.Server.Config.Contracts;
+﻿using Chloe.Server.Config.Contracts;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Chloe.Server.Auth
 {
