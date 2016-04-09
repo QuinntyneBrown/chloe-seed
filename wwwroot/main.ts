@@ -12,6 +12,7 @@ require("./tabs/tabs.module");
 require("./registration/registration.module");
 require("./login/login.module");
 require("./layout/layout.module");
+require("./image-rollover-button/image-rollover-button.module");
 
 var app: any = angular.module("app", [
     "app.core",
@@ -22,6 +23,7 @@ var app: any = angular.module("app", [
     "app.backdrop",
     "app.button",
     "app.header",
+    "app.imageRolloverButton",
     "app.tabs",
     "app.login",
     "app.modal",
