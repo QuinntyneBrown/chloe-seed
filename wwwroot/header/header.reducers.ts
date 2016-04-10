@@ -1,5 +1,5 @@
 import * as actions from "./header.actions";
-import { addOrUpdate, pluckOut } from "../core";
+import { addOrUpdate, pluckOut } from "core/core";
 
 export const removeHeaderReducer = (state, action) => {
     if (action instanceof actions.RemoveHeaderAction)

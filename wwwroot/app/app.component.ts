@@ -1,4 +1,4 @@
-import { CanActivate, Component, ChangeDetectionStrategy, Pipe, PipeTransform } from "../core";
+import { CanActivate, Component, ChangeDetectionStrategy, Pipe, PipeTransform } from "core/core";
 import { AppActionCreator } from "./app.actions";
 
 @Component({

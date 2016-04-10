@@ -1,4 +1,4 @@
-﻿require("../core/core.module");
+﻿require("core/core");
 
 import { HomeContainerComponent } from "./home-container.component";
 

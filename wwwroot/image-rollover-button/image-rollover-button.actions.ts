@@ -1,4 +1,4 @@
-import { IDispatcher } from "../core/store";
+import { IDispatcher } from "core/core";
 
 export class ImageRolloverButtonActionCreator  {
     constructor(public dispatcher: IDispatcher) {

@@ -1,4 +1,4 @@
-require("../core/core.module");
+require("core/core");
 
 import { BackdropActionCreator } from "./backdrop.actions";
 import { Backdrop } from "./backdrop.service";

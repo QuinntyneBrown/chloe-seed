@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "../core";
+import { Component, ChangeDetectionStrategy } from "core/core";
 import { ImageRolloverButtonActionCreator, ImageRollerButtonMouseEnterAction, ImageRollerButtonMouseLeaveAction, ImageRollerButtonMouseClickAction } from "./image-rollover-button.actions";
 
 @Component({

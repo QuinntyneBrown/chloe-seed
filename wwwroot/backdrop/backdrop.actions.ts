@@ -1,5 +1,5 @@
-import { IDispatcher } from "../core/store";
-import { BaseActionCreator } from "../core/action-creator";
+import { IDispatcher } from "core/core";
+import { BaseActionCreator } from "core/core";
 
 export class BackdropActionCreator extends BaseActionCreator {
     constructor($location: angular.ILocationService, dispatcher: IDispatcher, backdropService, guid) {

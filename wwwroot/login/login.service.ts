@@ -1,5 +1,4 @@
-import { IApiEndpoint } from "../core/api-endpoint-provider";
-import { Fetch } from "../core/fetch";
+import { Fetch, IApiEndpoint } from "core/core";
 
 export class LoginService {
     constructor(private $q: angular.IQService, public apiEndpoint: IApiEndpoint, private fetch: Fetch, private formEncode) { }

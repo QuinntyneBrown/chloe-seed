@@ -1,4 +1,4 @@
-require("../core/core.module");
+require("core/core");
 
 import { LoginComponent } from "./login.component";
 import { LoginContainerComponent } from "./login-container.component";

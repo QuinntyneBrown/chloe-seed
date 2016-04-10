@@ -1,4 +1,4 @@
-require("../core/core.module");
+require("core/core");
 
 import { ImageRolloverButtonComponent } from "./image-rollover-button.component";
 import { ImageRolloverButtonActionCreator } from "./image-rollover-button.actions";

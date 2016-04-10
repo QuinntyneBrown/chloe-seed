@@ -1,5 +1,5 @@
 import * as actions from "./modal.actions";
-import { addOrUpdate, pluckOut } from "../core";
+import { addOrUpdate, pluckOut } from "core/core";
 
 
 export const openModalReducer = (state, action) => {

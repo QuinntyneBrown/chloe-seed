@@ -1,5 +1,5 @@
-import { IDispatcher } from "../core/store";
-import { BaseActionCreator } from "../core/action-creator";
+import { IDispatcher } from "core/core";
+import { BaseActionCreator } from "core/core";
 import { LoginService } from "./login.service";
 
 export class LoginActionCreator extends BaseActionCreator {

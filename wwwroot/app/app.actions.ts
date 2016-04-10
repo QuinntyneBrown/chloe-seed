@@ -1,5 +1,4 @@
-import { IDispatcher } from "../core/store";
-import { BaseActionCreator } from "../core/action-creator";
+import { IDispatcher, BaseActionCreator } from "core/core";
 
 export class AppActionCreator extends BaseActionCreator {
     constructor($location: angular.ILocationService, dispatcher: IDispatcher, appService, guid) {

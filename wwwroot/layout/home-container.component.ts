@@ -1,4 +1,4 @@
-﻿import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
+﻿import { CanActivate, Component, ChangeDetectionStrategy } from "core/core";
 
 @Component({
     template: require("./home-container.component.html"),

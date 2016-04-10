@@ -372,6 +372,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <TypeScriptCompile Include="node_modules\core\core.ts" />
     <TypeScriptCompile Include="node_modules\rx\ts\rx.all.d.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
