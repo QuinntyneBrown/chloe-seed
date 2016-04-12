@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 
 import { HeaderComponent } from "./header.component";
 import { HeaderActionCreator } from "./header.actions";

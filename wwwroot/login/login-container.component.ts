@@ -1,4 +1,4 @@
-﻿import { CanActivate, Component, ChangeDetectionStrategy } from "core/core";
+﻿import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import * as actions from "./login.actions";
 
 @Component({

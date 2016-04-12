@@ -1,4 +1,4 @@
-import { BaseService } from "core/core";
+import { BaseService } from "../core";
 
 export class RegistrationService  {
     constructor(private $q: angular.IQService, private apiEndpoint, private fetch) { }

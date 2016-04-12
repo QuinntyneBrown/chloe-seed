@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 
 import { FooterComponent } from "./footer.component";
 import { FooterActionCreator } from "./footer.actions";

@@ -1,5 +1,5 @@
 import * as actions from "./footer.actions";
-import { addOrUpdate, pluckOut } from "core/core";
+import { addOrUpdate, pluckOut } from "../core";
 
 export const removeFooterReducer = (state, action) => {
     if (action instanceof actions.RemoveFooterAction)

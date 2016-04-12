@@ -1,4 +1,4 @@
-﻿import { CanActivate, Component, ChangeDetectionStrategy } from "core/core";
+﻿import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import { TabsActionCreator } from "./tabs.actions";
 
 @Component({

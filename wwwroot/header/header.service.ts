@@ -1,4 +1,4 @@
-import { BaseService } from "core/core";
+import { BaseService } from "../core";
 
 export class HeaderService extends BaseService {
     constructor($q: angular.IQService, apiEndpoint, fetch) {

@@ -1,5 +1,5 @@
 import * as actions from "./login.actions";
-import { addOrUpdate, pluckOut } from "core/core";
+import { addOrUpdate, pluckOut } from "../core";
 
 export const loggedInReducer = (state, action) => {
     if (action instanceof actions.UserLoggedInAction) {

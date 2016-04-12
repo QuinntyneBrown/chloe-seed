@@ -1,5 +1,5 @@
 import * as actions from "./registration.actions";
-import { addOrUpdate, pluckOut } from "core/core";
+import { addOrUpdate, pluckOut } from "../core";
 
 export const removeRegistrationReducer = (state, action) => {
     if (action instanceof actions.RemoveRegistrationAction)

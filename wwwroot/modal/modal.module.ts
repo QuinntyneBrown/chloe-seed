@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 require("../backdrop/backdrop.module");
 
 import { ModalActionCreator } from "./modal.actions";

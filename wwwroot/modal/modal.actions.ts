@@ -1,4 +1,4 @@
-import { IDispatcher } from "core/core";
+import { IDispatcher } from "../core";
 
 export class ModalActionCreator  {
     constructor(private $rootScope: angular.IRootScopeService, private dispatcher: IDispatcher) {

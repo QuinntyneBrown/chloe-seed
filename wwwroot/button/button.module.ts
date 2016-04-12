@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 
 import { ButtonComponent } from "./button.component";
 

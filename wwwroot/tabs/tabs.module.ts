@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 
 import { TabContentComponent } from "./tab-content.component";
 import { TabTitleComponent } from "./tab-title.component";

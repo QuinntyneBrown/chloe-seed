@@ -1,5 +1,5 @@
 import { SetCurrentTabAction, TabChildLoadedAction } from "./tabs.actions";
-import { addOrUpdate, pluckOut } from "core/core";
+import { addOrUpdate, pluckOut } from "../core";
 
 export const setCurrentTabReducer = (state, action) => {
     if (action instanceof SetCurrentTabAction) {        

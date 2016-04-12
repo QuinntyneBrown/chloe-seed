@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 require("../router-outlet/router-outlet.module");
 
 import { AppComponent } from "./app.component";

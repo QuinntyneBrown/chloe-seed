@@ -1,4 +1,4 @@
-import { CanActivate, Component, ChangeDetectionStrategy } from "core/core";
+import { CanActivate, Component, ChangeDetectionStrategy } from "../core";
 import { FooterActionCreator } from "./footer.actions";
 
 @Component({

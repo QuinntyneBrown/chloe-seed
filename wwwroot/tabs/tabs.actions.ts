@@ -1,5 +1,5 @@
-import { IDispatcher } from "core/core";
-import { BaseActionCreator } from "core/core";
+import { IDispatcher } from "../core";
+import { BaseActionCreator } from "../core";
 
 export class TabsActionCreator extends BaseActionCreator {
     constructor($location: angular.ILocationService, dispatcher: IDispatcher, tabsService, guid) {

@@ -12,7 +12,7 @@ require("./tabs/tabs.module");
 require("./registration/registration.module");
 require("./login/login.module");
 require("./layout/layout.module");
-require("./image-rollover-button/image-rollover-button.module");
+require("./image-button/image-button.module");
 
 var app: any = angular.module("app", [
     "app.core",

@@ -1,4 +1,4 @@
-require("core/core");
+require("../core/core.module");
 
 import { RegistrationComponent } from "./registration.component";
 import { RegistrationContainerComponent } from "./registration-container.component";

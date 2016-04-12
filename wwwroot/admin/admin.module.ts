@@ -1,4 +1,4 @@
-﻿require("core/core");
+﻿require("../core/core.module");
 
 import { AdminContainerComponent } from "./admin-container.component";
 
