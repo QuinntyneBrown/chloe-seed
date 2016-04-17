@@ -1,5 +1,13 @@
 import { CanActivate, Component, ChangeDetectionStrategy, Pipe, PipeTransform } from "../core";
+import { IAppState } from "../core/store";
+
 import { AppActionCreator } from "./app.actions";
+
+
+export interface IAppState extends IAppState {
+    modelHtml: string,
+    isModalOpen: boolean
+}
 
 @Component({
     template: require("./app.component.html"),
@@ -9,7 +17,7 @@ import { AppActionCreator } from "./app.actions";
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-    constructor(private appActionCreator: AppActionCreator) { }
+    constructor(private appActionCreator: AppActionCreator) {}
   
 }
 

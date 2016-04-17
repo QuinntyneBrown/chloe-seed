@@ -235,11 +235,17 @@
     <Content Include="wwwroot\admin\admin-container.component.html">
       <DependentUpon>admin-container.component.ts</DependentUpon>
     </Content>
-    <Content Include="wwwroot\image-rollover-button\image-rollover-button.component.css">
-      <DependentUpon>image-rollover-button.component.ts</DependentUpon>
+    <Content Include="wwwroot\image-button\image-button-list.component.css">
+      <DependentUpon>image-button-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="wwwroot\image-rollover-button\image-rollover-button.component.html">
-      <DependentUpon>image-rollover-button.component.ts</DependentUpon>
+    <Content Include="wwwroot\image-button\image-button-list.component.html">
+      <DependentUpon>image-button-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\image-button\image-button.component.css">
+      <DependentUpon>image-button.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\image-button\image-button.component.html">
+      <DependentUpon>image-button.component.ts</DependentUpon>
     </Content>
     <Content Include="wwwroot\layout\home-container.component.css">
       <DependentUpon>home-container.component.ts</DependentUpon>
@@ -385,6 +391,7 @@
     <TypeScriptCompile Include="wwwroot\app\app.module.ts" />
     <TypeScriptCompile Include="wwwroot\app\app.reducers.ts" />
     <TypeScriptCompile Include="wwwroot\app\app.service.ts" />
+    <TypeScriptCompile Include="wwwroot\app\index.ts" />
     <TypeScriptCompile Include="wwwroot\backdrop\backdrop.actions.ts" />
     <TypeScriptCompile Include="wwwroot\backdrop\backdrop.module.ts" />
     <TypeScriptCompile Include="wwwroot\backdrop\backdrop.reducers.ts" />
@@ -436,9 +443,10 @@
     <TypeScriptCompile Include="wwwroot\header\header.reducers.ts" />
     <TypeScriptCompile Include="wwwroot\header\header.service.ts" />
     <TypeScriptCompile Include="wwwroot\admin\admin-container.component.ts" />
-    <TypeScriptCompile Include="wwwroot\image-rollover-button\image-rollover-button.actions.ts" />
-    <TypeScriptCompile Include="wwwroot\image-rollover-button\image-rollover-button.component.ts" />
-    <TypeScriptCompile Include="wwwroot\image-rollover-button\image-rollover-button.module.ts" />
+    <TypeScriptCompile Include="wwwroot\image-button\image-button-list.component.ts" />
+    <TypeScriptCompile Include="wwwroot\image-button\image-button.actions.ts" />
+    <TypeScriptCompile Include="wwwroot\image-button\image-button.component.ts" />
+    <TypeScriptCompile Include="wwwroot\image-button\image-button.module.ts" />
     <TypeScriptCompile Include="wwwroot\layout\home-container.component.ts" />
     <TypeScriptCompile Include="wwwroot\layout\layout.module.ts" />
     <TypeScriptCompile Include="wwwroot\login\login-container.component.ts" />

@@ -5,9 +5,11 @@ import { ImageButtonActionCreator } from "./image-button.actions";
     template: require("./image-button-list.component.html"),
     styles: require("./image-button-list.component.css"),
     selector: "image-button-list",
-    viewProviders: ["imageButtonListActionCreator"],
+    inputs:["imageButtons"],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageButtonListComponent {
+    constructor() { }
 
+    imageButtons;
 }

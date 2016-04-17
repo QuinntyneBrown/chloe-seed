@@ -1,14 +1,15 @@
 ﻿require("./store");
+import { IAppState, Store } from "./store";
 
 class AuthInterceptor {
 
-    constructor(private store) {
+    constructor(private store: Store<IAppState>) {
         store.subscribe(state => this.storeOnChange(state));
     }
 
     static createInstance = store => new AuthInterceptor(store);
 
-    storeOnChange = state => { this.token = state.token };
+    storeOnChange = (state: IAppState) => { this.token = state.token };
 
     public request = (config) => {
         if (this.token) 
@@ -17,7 +18,7 @@ class AuthInterceptor {
         return config;
     }
 
-    token;
+    token: string;
 }
 
 angular.module("authInterceptor", ["store"])

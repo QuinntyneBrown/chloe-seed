@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from "../core";
 import { ImageButtonActionCreator, ImageButtonMouseEnterAction, ImageButtonMouseLeaveAction, ImageButtonMouseClickAction } from "./image-button.actions";
+import { IAppState } from "../app";
 
 @Component({
     template: require("./image-button.component.html"),
@@ -10,7 +11,7 @@ import { ImageButtonActionCreator, ImageButtonMouseEnterAction, ImageButtonMouse
 })
 export class ImageButtonComponent {
     constructor(private $attrs: angular.IAttributes, private $window: angular.IWindowService, private guid: Function, private ImageButtonActionCreator: ImageButtonActionCreator) {}
-    storeOnChange = state => {
+    storeOnChange = (state: IAppState) => {
         if (state.lastTriggeredByAction instanceof ImageButtonMouseEnterAction && state.lastTriggeredByActionId == this.id) 
             this.src = this.$attrs["enter"];
         

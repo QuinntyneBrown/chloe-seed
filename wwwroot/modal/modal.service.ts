@@ -1,4 +1,6 @@
 import * as actions from "./modal.actions";
+import { IAppState } from "../app";
+import { Store } from "../core/store";
 
 export class Modal {
     constructor(private $compile,
@@ -9,12 +11,12 @@ export class Modal {
         private extendCssAsync,
         private removeElement,
         private setOpacityAsync,
-        private store) {
+        private store: Store<IAppState>) {
 
         store.subscribe(this.storeOnChange);
     }
 
-    storeOnChange = state => [ this.html, this.isOpen ] = [ state.modelHtml, state.isModalOpen ];
+    storeOnChange = (state: IAppState) => [ this.html, this.isOpen ] = [ state.modelHtml, state.isModalOpen ];
     
     _html: string;
 

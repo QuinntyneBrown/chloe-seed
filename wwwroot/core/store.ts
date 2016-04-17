@@ -5,6 +5,7 @@ export * from "./local-storage-manager-provider";
 export interface IAppState {
     lastTriggeredByActionId: any;
     lastTriggeredByAction: any;
+    token: string;
 }
 
 export type AppState = {
