@@ -432,6 +432,7 @@
     <TypeScriptCompile Include="wwwroot\core\store.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x.ts" />
+    <TypeScriptCompile Include="wwwroot\core\view-encapsulation.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.actions.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.component.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.module.ts" />

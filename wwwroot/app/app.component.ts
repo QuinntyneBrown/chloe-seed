@@ -1,4 +1,4 @@
-import { CanActivate, Component, ChangeDetectionStrategy, Pipe, PipeTransform } from "../core";
+import { CanActivate, Component, ChangeDetectionStrategy, Pipe, PipeTransform, ViewEncapsulation } from "../core";
 import { IAppState } from "../core/store";
 
 import { AppActionCreator } from "./app.actions";
@@ -14,7 +14,8 @@ export interface IAppState extends IAppState {
     styles: [require("./app.component.css")],
     selector: "app",
     viewProviders: ["appActionCreator"],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
     constructor(private appActionCreator: AppActionCreator) {}

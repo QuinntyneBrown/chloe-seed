@@ -9,6 +9,7 @@ export * from "./pluck-out";
 export * from "./invoke-async";
 export * from "./change-detection-strategy";
 export * from "./component-decorators";
+export * from "./view-encapsulation";
 
 export * from "./pipe";
 export * from "./pipe-transform";

@@ -1,4 +1,5 @@
 ﻿import { ChangeDetectionStrategy } from "./change-detection-strategy";
+import { ViewEncapsulation } from "./view-encapsulation";
 
 export function Component(config: IComponentConfigurationOptions = {}) {
     return function (cls) {
@@ -31,5 +32,6 @@ export interface IComponentConfigurationOptions {
     styleUrls?: Array<string>,
     styles?: Array<string>,
     changeDetection?: ChangeDetectionStrategy,
-    moduleId?: string
+    moduleId?: string,
+    encapsulation?: ViewEncapsulation
 }
