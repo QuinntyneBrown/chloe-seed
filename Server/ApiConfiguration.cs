@@ -9,6 +9,7 @@ using Microsoft.Owin.Security.OAuth;
 using Chloe.App_Start;
 using Chloe.Server.Filters;
 using Chloe.Server.Utils.Contracts;
+using Swashbuckle.Application;
 
 namespace Chloe.Server
 {
@@ -25,6 +26,10 @@ namespace Chloe.Server
             Chloe.Server.Services.Contracts.IIdentityService identityService = UnityConfiguration.GetContainer().Resolve<Chloe.Server.Services.Contracts.IIdentityService>();
 
             Chloe.Server.Config.Contracts.IConfigurationProvider configurationProvider = UnityConfiguration.GetContainer().Resolve<IConfigurationProvider>();
+
+            config
+                .EnableSwagger(c => c.SingleApiVersion("v1", "Chloe Seed"))
+                .EnableSwaggerUi();
 
             app.UseOAuthAuthorizationServer(new OAuthOptions(configurationProvider, identityService));
 

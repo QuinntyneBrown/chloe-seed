@@ -1,8 +1,9 @@
-import { Fetch, IApiEndpoint } from "../core";
+import { Fetch, IApiEndpoint, Injectable, Inject } from "../core";
 
+@Injectable()
 export class LoginService {
     constructor(private $q: angular.IQService, public apiEndpoint: IApiEndpoint, private fetch: Fetch, private formEncode) { }
-
+    
     tryToLogin = options => {
         var deferred = this.$q.defer();
         angular.extend(options.data, { grant_type: "password" });

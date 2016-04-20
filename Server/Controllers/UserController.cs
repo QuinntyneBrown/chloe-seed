@@ -1,6 +1,7 @@
 ﻿using Chloe.Server.Dtos;
 using Chloe.Server.Services.Contracts;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace Chloe.Server.Controllers
 {
@@ -15,6 +16,7 @@ namespace Chloe.Server.Controllers
         [HttpPost]
         [Route("register")]
         [AllowAnonymous]
+        [ResponseType(typeof(RegistrationResponseDto))]
         public IHttpActionResult Register(RegistrationRequestDto request)
         {
             return Ok(this.service.Register(request));

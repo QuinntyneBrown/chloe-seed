@@ -11,6 +11,7 @@ import { IAppState } from "../app";
 })
 export class ImageButtonComponent {
     constructor(private $attrs: angular.IAttributes, private $window: angular.IWindowService, private guid: Function, private ImageButtonActionCreator: ImageButtonActionCreator) {}
+
     storeOnChange = (state: IAppState) => {
         if (state.lastTriggeredByAction instanceof ImageButtonMouseEnterAction && state.lastTriggeredByActionId == this.id) 
             this.src = this.$attrs["enter"];

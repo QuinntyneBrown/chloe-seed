@@ -5,6 +5,7 @@ require("./app/app.module");
 require("./admin/admin.module");
 require("./backdrop/backdrop.module");
 require("./button/button.module");
+require("./image-button/image-button.module");
 
 require("./header/header.module");
 require("./modal/modal.module");
@@ -23,7 +24,7 @@ var app: any = angular.module("app", [
     "app.backdrop",
     "app.button",
     "app.header",
-    "app.imageRolloverButton",
+    "app.imageButton",
     "app.tabs",
     "app.login",
     "app.modal",
