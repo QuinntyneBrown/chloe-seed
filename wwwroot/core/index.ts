@@ -16,5 +16,6 @@ export * from "./pipe-transform";
 export * from "./get-x";
 export * from "./translate-x";
 export * from "./translate-x-async";
+export * from "./injectable";
 
 export var addOrUpdate: any = angular.injector(['addOrUpdate']).get("addOrUpdate");

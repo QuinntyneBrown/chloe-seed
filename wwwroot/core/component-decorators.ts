@@ -16,17 +16,6 @@ export function CanActivate(fnDefinition: Array<any>) {
     };
 }
 
-export function Inject() {
-    return function (target: any) {
-        
-    };
-}
-
-export function Injectable(noop: any = null) {
-    return function (cls) {
-    };
-}
-
 export interface IComponentConfigurationOptions {
     componentName?:string,
     component?:any,

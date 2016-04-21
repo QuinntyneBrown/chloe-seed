@@ -357,6 +357,7 @@
     <Compile Include="Server\Dtos\RegistrationResponseDto.cs" />
     <Compile Include="Server\Dtos\TokenDto.cs" />
     <Compile Include="Server\Exceptions\NotFoundException.cs" />
+    <Compile Include="Server\Extensions\UnityExtensions.cs" />
     <Compile Include="Server\Filters\ChloeHandleErrorAttribute.cs" />
     <Compile Include="Server\Models\BaseEntity.cs" />
     <Compile Include="Server\Models\Role.cs" />
@@ -418,7 +419,9 @@
     <TypeScriptCompile Include="wwwroot\core\form-encode.ts" />
     <TypeScriptCompile Include="wwwroot\core\get-from-url-sync.ts" />
     <TypeScriptCompile Include="wwwroot\core\get-x.ts" />
+    <TypeScriptCompile Include="wwwroot\core\http.ts" />
     <TypeScriptCompile Include="wwwroot\core\index.ts" />
+    <TypeScriptCompile Include="wwwroot\core\injectable.ts" />
     <TypeScriptCompile Include="wwwroot\core\invoke-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\local-storage-manager-provider.ts" />
     <TypeScriptCompile Include="wwwroot\core\login-redirect-provider.ts" />
@@ -433,6 +436,7 @@
     <TypeScriptCompile Include="wwwroot\core\safe-digest.ts" />
     <TypeScriptCompile Include="wwwroot\core\service.ts" />
     <TypeScriptCompile Include="wwwroot\core\set-opacity-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\static-response.ts" />
     <TypeScriptCompile Include="wwwroot\core\store.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x.ts" />

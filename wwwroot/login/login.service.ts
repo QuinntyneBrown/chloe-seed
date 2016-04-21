@@ -1,4 +1,4 @@
-import { Fetch, IApiEndpoint, Injectable, Inject } from "../core";
+import { Fetch, IApiEndpoint, Injectable } from "../core";
 
 @Injectable()
 export class LoginService {
