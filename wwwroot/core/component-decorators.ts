@@ -4,7 +4,7 @@ import { ViewEncapsulation } from "./view-encapsulation";
 export function Component(config: IComponentConfigurationOptions = {}) {
     return function (cls) {
         config.component = cls;
-        cls.config = config;
+        cls.config = config;        
     };
 }
 

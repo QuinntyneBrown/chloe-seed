@@ -24,7 +24,6 @@ require("./route-resolver");
 require("./route-when-extension");
 require("./set-opacity-async");
 require("./auth-interceptor");
-require("./renderer");
 require("./translate-x");
 require("./translate-x-async");
 
@@ -44,7 +43,6 @@ let coreApp = (<any>angular.module("app.core", [
     "localStorageManager",
     "loginRedirect",
     "removeElement",
-    "renderer",
     "routeResolver",
     "routeWhenExtension",
     "safeDigest",

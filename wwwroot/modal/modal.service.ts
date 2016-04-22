@@ -1,6 +1,6 @@
 import * as actions from "./modal.actions";
 import { IAppState } from "../app";
-import { Store } from "../core/store";
+import { Store } from "../core";
 
 export class Modal {
     constructor(private $compile,

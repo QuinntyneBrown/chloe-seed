@@ -357,7 +357,6 @@
     <Compile Include="Server\Dtos\RegistrationResponseDto.cs" />
     <Compile Include="Server\Dtos\TokenDto.cs" />
     <Compile Include="Server\Exceptions\NotFoundException.cs" />
-    <Compile Include="Server\Extensions\UnityExtensions.cs" />
     <Compile Include="Server\Filters\ChloeHandleErrorAttribute.cs" />
     <Compile Include="Server\Models\BaseEntity.cs" />
     <Compile Include="Server\Models\Role.cs" />
@@ -381,7 +380,9 @@
     <Compile Include="Server\Utils\Logger.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Server\Extensions\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="node_modules\core\core.ts" />
     <TypeScriptCompile Include="node_modules\rx\ts\rx.all.d.ts" />
@@ -412,19 +413,28 @@
     <TypeScriptCompile Include="wwwroot\core\change-detection-strategy.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-decorators.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-extension.ts" />
+    <TypeScriptCompile Include="wwwroot\core\content-child.ts" />
+    <TypeScriptCompile Include="wwwroot\core\content-children.ts" />
     <TypeScriptCompile Include="wwwroot\core\core.module.ts" />
     <TypeScriptCompile Include="wwwroot\core\debounce.ts" />
+    <TypeScriptCompile Include="wwwroot\core\directive.ts" />
     <TypeScriptCompile Include="wwwroot\core\extend-css-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\fetch.ts" />
     <TypeScriptCompile Include="wwwroot\core\form-encode.ts" />
     <TypeScriptCompile Include="wwwroot\core\get-from-url-sync.ts" />
     <TypeScriptCompile Include="wwwroot\core\get-x.ts" />
+    <TypeScriptCompile Include="wwwroot\core\host-binding.ts" />
+    <TypeScriptCompile Include="wwwroot\core\host-listener.ts" />
     <TypeScriptCompile Include="wwwroot\core\http.ts" />
     <TypeScriptCompile Include="wwwroot\core\index.ts" />
+    <TypeScriptCompile Include="wwwroot\core\inject.ts" />
     <TypeScriptCompile Include="wwwroot\core\injectable.ts" />
+    <TypeScriptCompile Include="wwwroot\core\input.ts" />
     <TypeScriptCompile Include="wwwroot\core\invoke-async.ts" />
+    <TypeScriptCompile Include="wwwroot\core\is-present.ts" />
     <TypeScriptCompile Include="wwwroot\core\local-storage-manager-provider.ts" />
     <TypeScriptCompile Include="wwwroot\core\login-redirect-provider.ts" />
+    <TypeScriptCompile Include="wwwroot\core\output.ts" />
     <TypeScriptCompile Include="wwwroot\core\pipe-transform.ts" />
     <TypeScriptCompile Include="wwwroot\core\pipe.ts" />
     <TypeScriptCompile Include="wwwroot\core\pluck-out.ts" />
@@ -440,7 +450,10 @@
     <TypeScriptCompile Include="wwwroot\core\store.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x.ts" />
+    <TypeScriptCompile Include="wwwroot\core\view-child.ts" />
+    <TypeScriptCompile Include="wwwroot\core\view-children.ts" />
     <TypeScriptCompile Include="wwwroot\core\view-encapsulation.ts" />
+    <TypeScriptCompile Include="wwwroot\core\xhr-backend.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.actions.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.component.ts" />
     <TypeScriptCompile Include="wwwroot\footer\footer.module.ts" />
