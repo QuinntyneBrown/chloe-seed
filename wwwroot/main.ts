@@ -14,6 +14,7 @@ require("./registration/registration.module");
 require("./login/login.module");
 require("./layout/layout.module");
 require("./image-button/image-button.module");
+require("./popover/popover.module");
 
 var app: any = angular.module("app", [
     "app.core",
@@ -29,7 +30,8 @@ var app: any = angular.module("app", [
     "app.login",
     "app.modal",
     "app.registration",
-    "app.layout"
+    "app.layout",
+    "app.popover"
 ]);
 
 app.config(["initialStateProvider", "localStorageManagerProvider", (initialStateProvider, localStorageManagerProvider) => {

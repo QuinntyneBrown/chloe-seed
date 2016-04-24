@@ -482,6 +482,17 @@
     <TypeScriptCompile Include="wwwroot\modal\modal.module.ts" />
     <TypeScriptCompile Include="wwwroot\modal\modal.reducers.ts" />
     <TypeScriptCompile Include="wwwroot\modal\modal.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\popover.actions.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\popover.interfaces.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\popover.module.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\popover.reducers.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\popover.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\position.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\rectangle.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\ruler.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\space.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\template.service.ts" />
+    <TypeScriptCompile Include="wwwroot\popover\translateXY.ts" />
     <TypeScriptCompile Include="wwwroot\registration\registration-container.component.ts" />
     <TypeScriptCompile Include="wwwroot\registration\registration.actions.ts" />
     <TypeScriptCompile Include="wwwroot\registration\registration.component.ts" />
