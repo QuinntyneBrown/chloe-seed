@@ -208,6 +208,12 @@
     <Content Include="node_modules\angular-sanitize\angular-sanitize.js" />
     <Content Include="packages.config" />
     <Content Include="tsconfig.json" />
+    <Content Include="wwwroot\admin\admin-side-nav.component.css">
+      <DependentUpon>admin-side-nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\admin\admin-side-nav.component.html">
+      <DependentUpon>admin-side-nav.component.ts</DependentUpon>
+    </Content>
     <Content Include="wwwroot\app\app.component.css">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
@@ -391,6 +397,7 @@
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="wwwroot\admin\admin-side-nav.component.ts" />
     <TypeScriptCompile Include="wwwroot\admin\admin.module.ts" />
     <TypeScriptCompile Include="wwwroot\app\app.actions.ts" />
     <TypeScriptCompile Include="wwwroot\app\app.component.ts" />

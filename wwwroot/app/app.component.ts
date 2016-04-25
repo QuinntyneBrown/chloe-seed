@@ -9,7 +9,6 @@ export interface IAppState extends IAppState {
     isModalOpen: boolean
 }
 
-
 @Component({
     template: require("./app.component.html"),
     styles: [require("./app.component.css")],

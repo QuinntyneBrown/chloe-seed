@@ -10,11 +10,11 @@ namespace Chloe.App_Start
 {
     public class WebApiUnityActionFilterProvider: ActionDescriptorFilterProvider, IFilterProvider
     {
-        private readonly IUnityContainer container;
+        private readonly IUnityContainer _container;
 
         public WebApiUnityActionFilterProvider(IUnityContainer container)
         {
-            this.container = container;
+            _container = container;
         }
 
         public new IEnumerable<FilterInfo> GetFilters(HttpConfiguration configuration, HttpActionDescriptor actionDescriptor)
@@ -24,7 +24,7 @@ namespace Chloe.App_Start
 
             foreach (var filter in filters)
             {
-                container.BuildUp(filter.Instance.GetType(), filter.Instance);
+                _container.BuildUp(filter.Instance.GetType(), filter.Instance);
             }
 
             return filters;
