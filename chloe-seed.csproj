@@ -194,9 +194,6 @@
     <Content Include="App_Data\Chloe.sdf" />
     <Content Include="bower_components\angular-ui-tinymce\src\tinymce.js" />
     <Content Include="bower_components\tinymce-dist\tinymce.js" />
-    <Content Include="dist\app.css" />
-    <Content Include="dist\app.js" />
-    <Content Include="dist\app.templates.js" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="lib\angular-route.js" />
@@ -399,6 +396,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dist\" />
     <Folder Include="Server\Extensions\" />
   </ItemGroup>
   <ItemGroup>
@@ -558,7 +556,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50224</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -11,25 +11,21 @@ import { ViewPort } from "./view-port.service";
         "$compile",
         "$interval",
         "getY",
-        "injector",
+        "virtualForDependencyResolver",
         "safeDigest",
         "transformY"
     ]
 })
 export class VirtualForRenderer {
-    constructor(private $compile, private $interval, private getY, private injector, private safeDigest, private transformY) {
+    constructor(private $compile, private $interval, private getY, private virtualForDependencyResolver, private safeDigest, private transformY) { }
 
-    }
-
-    createInstance = () => {
-        var instance = new VirtualForRenderer(this.$compile, this.$interval, this.getY, this.injector, this.safeDigest, this.transformY);
+    createInstance = (options:any) => {
+        var instance = new VirtualForRenderer(this.$compile, this.$interval, this.getY, this.virtualForDependencyResolver, this.safeDigest, this.transformY);
 
         return instance;
     }
 
-    render = (options: any) => {
-
-    }
+    render = (options: any) => { }
 
     private _scope: any;
     private _lastScrollY: number = 0;

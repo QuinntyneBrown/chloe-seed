@@ -69,7 +69,7 @@ angular.module = function () {
             styles = angular.isArray(styles) ? styles.join(" \n ") : styles;
         }
 
-        directiveDefinitionObject.compile = function () {
+        directiveDefinitionObject.compile = function (template: angular.IAugmentedJQuery) {
             return {
                 pre: function (scope, element, attributes, controller, transcludeFn) {
                     if (options.transclude)
@@ -121,6 +121,7 @@ angular.module = function () {
 
                     if (options.transclude && scope.vm.$transclude)
                         scope.vm.$transclude(scope, (clone: ng.IAugmentedJQuery) => {
+                            scope.vm.template = template;
                             scope.vm.clone = clone;
                         });
 

@@ -33,5 +33,6 @@ export interface IComponentConfigurationOptions {
     styles?: Array<string>,
     changeDetection?: ChangeDetectionStrategy,
     moduleId?: string,
-    encapsulation?: ViewEncapsulation
+    encapsulation?: ViewEncapsulation,
+    restrict?:string;
 }
