@@ -26,6 +26,7 @@ require("./set-opacity-async");
 require("./auth-interceptor");
 require("./translate-x");
 require("./translate-x-async");
+require("./get-html");
 
 
 let coreApp = (<any>angular.module("app.core", [
@@ -37,6 +38,7 @@ let coreApp = (<any>angular.module("app.core", [
     "extendCssAsync",
     "fetch",
     "formEncode",
+    "getHtml",
     "getFromUrlSync",
     "getX",
     "invokeAsync",

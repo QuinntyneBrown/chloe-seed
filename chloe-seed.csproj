@@ -208,6 +208,12 @@
     <Content Include="node_modules\angular-sanitize\angular-sanitize.js" />
     <Content Include="packages.config" />
     <Content Include="tsconfig.json" />
+    <Content Include="wwwroot\admin\admin-app.component.css">
+      <DependentUpon>admin-app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\admin\admin-app.component.html">
+      <DependentUpon>admin-app.component.ts</DependentUpon>
+    </Content>
     <Content Include="wwwroot\admin\admin-side-nav.component.css">
       <DependentUpon>admin-side-nav.component.ts</DependentUpon>
     </Content>
@@ -321,6 +327,12 @@
     <Content Include="wwwroot\tabs\tabs.component.html">
       <DependentUpon>tabs.component.ts</DependentUpon>
     </Content>
+    <Content Include="wwwroot\virtual-for\virtual-for.component.css">
+      <DependentUpon>virtual-for.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\virtual-for\virtual-for.component.html">
+      <DependentUpon>virtual-for.component.ts</DependentUpon>
+    </Content>
     <Content Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
     <Content Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
     <Content Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
@@ -397,6 +409,7 @@
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="wwwroot\admin\admin-app.component.ts" />
     <TypeScriptCompile Include="wwwroot\admin\admin-side-nav.component.ts" />
     <TypeScriptCompile Include="wwwroot\admin\admin.module.ts" />
     <TypeScriptCompile Include="wwwroot\app\app.actions.ts" />
@@ -418,6 +431,9 @@
     <TypeScriptCompile Include="wwwroot\core\append-to-body-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\auth-interceptor.ts" />
     <TypeScriptCompile Include="wwwroot\core\change-detection-strategy.ts" />
+    <TypeScriptCompile Include="wwwroot\core\get-html.ts" />
+    <TypeScriptCompile Include="wwwroot\core\get-y.ts" />
+    <TypeScriptCompile Include="wwwroot\core\service-decorator.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-decorators.ts" />
     <TypeScriptCompile Include="wwwroot\core\component-extension.ts" />
     <TypeScriptCompile Include="wwwroot\core\content-child.ts" />
@@ -455,6 +471,7 @@
     <TypeScriptCompile Include="wwwroot\core\set-opacity-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\static-response.ts" />
     <TypeScriptCompile Include="wwwroot\core\store.ts" />
+    <TypeScriptCompile Include="wwwroot\core\transform-y.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x-async.ts" />
     <TypeScriptCompile Include="wwwroot\core\translate-x.ts" />
     <TypeScriptCompile Include="wwwroot\core\view-child.ts" />
@@ -515,6 +532,15 @@
     <TypeScriptCompile Include="wwwroot\tabs\tabs.module.ts" />
     <TypeScriptCompile Include="wwwroot\tabs\tabs.reducers.ts" />
     <TypeScriptCompile Include="wwwroot\tabs\tabs.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\collection-manager.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\container.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\rendered-nodes.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\view-port.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for-renderer.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for.actions.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for.component.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for.module.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for.reducers.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

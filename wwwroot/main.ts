@@ -6,6 +6,7 @@ require("./admin/admin.module");
 require("./backdrop/backdrop.module");
 require("./button/button.module");
 require("./image-button/image-button.module");
+require("./virtual-for/virtual-for.module");
 
 require("./header/header.module");
 require("./modal/modal.module");
@@ -31,7 +32,8 @@ var app: any = angular.module("app", [
     "app.modal",
     "app.registration",
     "app.layout",
-    "app.popover"
+    "app.popover",
+    "app.virtualFor"
 ]);
 
 app.config(["initialStateProvider", "localStorageManagerProvider", (initialStateProvider, localStorageManagerProvider) => {
