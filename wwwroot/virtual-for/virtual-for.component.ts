@@ -16,9 +16,7 @@ export class VirtualForComponent {
     constructor(private $transclude, private getHtml: IGetHtmlFn, private virtualForRenderer: VirtualForRenderer) { }
 
     ngOnInit = () => {
-        this.removeCustomAttributes(this.clone, "virtual-for");
-        var s = this.template;
-        var y = this.clone;
+        this.removeCustomAttributes(this.clone[0], "virtual-for");        
     }
 
     public clone: angular.IAugmentedJQuery;
@@ -39,9 +37,9 @@ export class VirtualForComponent {
         }
     }
 
-    public removeCustomAttributes(clone: ng.IAugmentedJQuery, prefix: string) {
+    public removeCustomAttributes(clone: HTMLElement, prefix: string) {
         var names: Array<string> = [];
-        var attributes = clone[0].attributes;
+        var attributes = clone.attributes;
         for (var i = 0; i < attributes.length; i++) {
             if (attributes[i].nodeName.indexOf(prefix) > -1)
                 names.push(attributes[i].nodeName);

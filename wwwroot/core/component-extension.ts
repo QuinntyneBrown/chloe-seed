@@ -120,9 +120,15 @@ angular.module = function () {
                     }
 
                     if (options.transclude && scope.vm.$transclude)
-                        scope.vm.$transclude(scope, (clone: ng.IAugmentedJQuery) => {
+                        scope.vm.$transclude(scope.$new(), function (clone: ng.IAugmentedJQuery) {
                             scope.vm.template = template;
-                            scope.vm.clone = clone;
+
+                            //TODO: Get HTML Element type of template and use that for the fragment below
+                            var documentFragment = angular.element("<div></div>");
+                            for (var i = 0; i < clone.length; i++) {
+                                documentFragment.append(clone[i]);
+                            }
+                            scope.vm.clone = documentFragment;
                         });
 
                     if (scope.vm && scope.vm.ngOnInit)
