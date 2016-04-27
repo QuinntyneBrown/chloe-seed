@@ -536,6 +536,7 @@
     <TypeScriptCompile Include="wwwroot\virtual-for\container.service.ts" />
     <TypeScriptCompile Include="wwwroot\virtual-for\rendered-nodes.service.ts" />
     <TypeScriptCompile Include="wwwroot\virtual-for\view-port.service.ts" />
+    <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for-dependency-resolver.service.ts" />
     <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for-renderer.service.ts" />
     <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for.actions.ts" />
     <TypeScriptCompile Include="wwwroot\virtual-for\virtual-for.component.ts" />

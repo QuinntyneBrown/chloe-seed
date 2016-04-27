@@ -15,6 +15,7 @@ require("./fetch");
 require("./form-encode");
 require("./get-from-url-sync");
 require("./get-x");
+require("./get-y");
 require("./invoke-async");
 require("./login-redirect-provider");
 require("./safe-digest");
@@ -26,6 +27,7 @@ require("./set-opacity-async");
 require("./auth-interceptor");
 require("./translate-x");
 require("./translate-x-async");
+require("./transform-y");
 require("./get-html");
 
 
@@ -41,6 +43,7 @@ let coreApp = (<any>angular.module("app.core", [
     "getHtml",
     "getFromUrlSync",
     "getX",
+    "getY",
     "invokeAsync",
     "localStorageManager",
     "loginRedirect",
@@ -52,4 +55,5 @@ let coreApp = (<any>angular.module("app.core", [
     "store",   
     "translateX",
     "translateXAsync",
+    "transformY",
 ]));

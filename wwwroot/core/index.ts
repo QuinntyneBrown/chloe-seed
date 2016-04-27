@@ -11,8 +11,10 @@ export * from "./get-html";
 export var addOrUpdate: any = angular.injector(['addOrUpdate']).get("addOrUpdate");
 
 export * from "./get-x";
+export * from "./get-y";
 export * from "./translate-x";
 export * from "./translate-x-async";
+export * from "./transform-y";
 export * from "./view-encapsulation";
 export * from "./inject";
 export * from "./injectable";
