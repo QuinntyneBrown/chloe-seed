@@ -6,17 +6,23 @@ import { VirtualForRenderer } from "./virtual-for-renderer.service";
     template: require("./virtual-for.component.html"),
     styles: require("./virtual-for.component.css"),
     selector: "virtual-for",
-    viewProviders: ["$transclude","getHtml", "virtualForRenderer"],
+    viewProviders: ["$attrs","$element","$scope","$transclude","getHtml", "virtualForRenderer"],
     transclude: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     restrict:"A"
 })
 export class VirtualForComponent {
 
-    constructor(private $transclude, private getHtml: IGetHtmlFn, private virtualForRenderer: VirtualForRenderer) { }
+    constructor(private $attrs: angular.IAttributes, private $element: angular.IAugmentedJQuery, private $scope:angular.IScope, private $transclude, private getHtml: IGetHtmlFn, private virtualForRenderer: VirtualForRenderer) { }
 
-    ngOnInit = () => {
-        this.removeCustomAttributes(this.clone[0], "virtual-for");        
+    ngOnInit = () => {        
+        this.virtualForRenderer.createInstance({
+            element: this.$element,
+            template: this.getHtml(this.clone[0],true),
+            items: this.parseItems(this.$scope, this.$attrs),
+            scope: this.$scope
+        }).render({ lastScrollY: 0, scrollY: 0 });
+
     }
 
     public clone: angular.IAugmentedJQuery;
@@ -35,16 +41,6 @@ export class VirtualForComponent {
         } else {
             return JSON.parse(attributes["virtualFor"]);
         }
-    }
-
-    public removeCustomAttributes(clone: HTMLElement, prefix: string) {
-        var names: Array<string> = [];
-        var attributes = clone.attributes;
-        for (var i = 0; i < attributes.length; i++) {
-            if (attributes[i].nodeName.indexOf(prefix) > -1)
-                names.push(attributes[i].nodeName);
-        }
-        names.forEach((name: string) => { clone[0].removeAttribute(name); });
     }
 
     public verifyRepeatExpression(repeatExpression) {
