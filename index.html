@@ -14,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
     
 </head>
-<body data-ng-app="app">
-
+<body data-ng-app="app" style="margin:0;padding:0;">
     <div virtual-for='[
          { "name" : "Matrix" },
          { "name" : "This the End" },
@@ -39,10 +38,10 @@
          { "name" : "Fast 7" },
          { "name" : "Coming To America" }]'
          virtual-for-of="movie">
-        <h1>{{ movie.name }} </h1>
+        <h1 style="line-height:2.5em">{{ movie.name }} </h1>
     </div>
 
-    <app></app>
+    <!--<app></app>-->
     <script src="lib/jquery.js"></script>
     <script type="text/javascript" src="bower_components/tinymce-dist/tinymce.js"></script>
     <script src="lib/angular.js"></script>

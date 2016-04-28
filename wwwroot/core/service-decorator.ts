@@ -1,6 +1,6 @@
 ﻿export function Service(config: IServiceConfigurationOptions = {}) {
     return function (cls) {
-        cls.name = config.serviceName;
+        cls.serviceName = config.serviceName;
         cls.$inject = config.viewProviders;        
     };
 }

@@ -12,7 +12,7 @@ export class VirtualForDependencyResolver {
 
     constructor(private $injector: ng.auto.IInjectorService) { }
 
-    public get = (options: any): any => {
+    public resolve = (options: any): any => {
         switch (options.interfaceName) {
             case "CollectionManager":
                 return (<CollectionManager>this.$injector.get("collectionManager")).createInstance({ items: options.items });

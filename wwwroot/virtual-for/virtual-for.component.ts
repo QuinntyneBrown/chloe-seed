@@ -17,6 +17,7 @@ export class VirtualForComponent {
 
     ngOnInit = () => {        
         this.virtualForRenderer.createInstance({
+            attributes: this.$attrs,
             element: this.$element,
             template: this.getHtml(this.clone[0],true),
             items: this.parseItems(this.$scope, this.$attrs),
